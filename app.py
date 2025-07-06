@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 from routes.auth import auth_bp
 from utils.cors import apply_cors_headers
+from flask_cors import CORS
 
 app = Flask(__name__)
 CORS(app, supports_credentials=True)
