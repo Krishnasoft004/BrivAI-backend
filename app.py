@@ -3,6 +3,7 @@ from routes.auth import auth_bp
 from utils.cors import apply_cors_headers
 
 app = Flask(__name__)
+CORS(app, supports_credentials=True)
 app.register_blueprint(auth_bp, url_prefix="/api/auth")
 
 @app.after_request
